@@ -3,8 +3,8 @@ import TimeAgo from "react-timeago";
 export default function IssueDetailHeader(props:any){
     const {title, number, closed, createdAt, author, comments} = props.labelData
     return (
-        <div className="lg:mx-64 my-10 ">
-            <div className="flex justify-between">
+        <div className="md:mx-16 2xl:mx-64 my-10 ">
+            <div className="flex justify-between gap-10">
               <h3 className="text-3xl font-light ">
                 {title} <span className="text-gray-400">#{number}</span>
               </h3>

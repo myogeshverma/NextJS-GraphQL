@@ -14,8 +14,8 @@ import {
   InfoIcon,
 } from "@primer/octicons-react";
 import {useRouter } from "next/router";
-import {abbreviateNumber} from "../utils/abbreviateNumber"
-import {SharedContext} from '../context/sharedContext';
+import {abbreviateNumber} from "../../utils/abbreviateNumber"
+import {SharedContext} from '../../context/sharedContext';
 
 interface IProps {
     props: any;

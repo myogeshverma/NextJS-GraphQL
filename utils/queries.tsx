@@ -91,7 +91,7 @@ export const REPO_ISSUE_WITH_FILTER = gql`
       }
       issues(
         orderBy: { field: CREATED_AT, direction: DESC }
-        first: 5
+        first: 10
         states: $states
         after: $after
       ) {

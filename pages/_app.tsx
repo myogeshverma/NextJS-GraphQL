@@ -9,8 +9,6 @@ import client from "../utils/apollo-client";
 
 
 function MyApp({ Component, pageProps,  }: AppProps) {
-  // console.log('pageProps', pageProps);
-  // console.log('Component', Component);
   return (
         <Layout>
           <ApolloProvider client={client}>

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useLazyQuery } from "@apollo/client";
 import client from "../../../../utils/apollo-client";
-import HeaderSecondary from "../../../../components/HeaderSeconday";
-import IssueListHeader from "../../../../components/IssueListHeader";
+import HeaderSecondary from "../../../../components/Issue/IssuePageHeader";
+import IssueListHeader from "../../../../components/Issue/IssueListHeader";
 import { withRouter, NextRouter } from "next/router";
 import { REPO_ISSUE_WITH_FILTER } from "../../../../utils/queries";
-import IssueListItem from "../../../../components/IssueListItem";
+import IssueListItem from "../../../../components/Issue/IssueListItem";
 import {GetServerSideProps} from 'next';
 
 interface IProps {

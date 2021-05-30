@@ -1,8 +1,8 @@
 import React,{useContext} from 'react';
 import { MarkGithubIcon, RepoIcon, EyeIcon, StarIcon, RepoForkedIcon, CodeIcon, GitPullRequestIcon, PlayIcon, ProjectIcon, BookIcon, ShieldIcon, GraphIcon, InfoIcon, TriangleDownIcon, CheckIcon } from "@primer/octicons-react";
-import {abbreviateNumber} from "../utils/abbreviateNumber"
+import {abbreviateNumber} from "../../utils/abbreviateNumber"
 import {useRouter} from "next/router";
-import {SharedContext} from '../context/sharedContext';
+import {SharedContext} from '../../context/sharedContext';
 
 export default function RepoCard(props:RepoCard) {
     const router = useRouter()

@@ -1,5 +1,4 @@
 export default function AddComment(props:any) {
-  console.log("props", props);
   const { handleChange, handleOnsubmit, commentValue } = props.handler;
   return (
     <div className="flex w-full my-10 mb-32">

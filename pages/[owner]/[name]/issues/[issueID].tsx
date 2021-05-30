@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { ClockIcon } from "@primer/octicons-react";
 import { useMutation, useQuery } from "@apollo/client";
 import TimeAgo from "react-timeago";
-import HeaderSecondary from "../../../../components/HeaderSeconday";
-import CommentBox from "../../../../components/CommentBox";
+import HeaderSecondary from "../../../../components/Issue/IssuePageHeader";
+import CommentBox from "../../../../components/Comment/CommentBox";
 import { withRouter, NextRouter } from "next/router";
 import { ADD_COMMENT, GET_COMMENTS_OF_ISSUE } from "../../../../utils/queries";
-import CommentSidebar from "../../../../components/CommentSidebar";
-import AddComment from "../../../../components/AddComment";
-import IssueDetailHeader from "../../../../components/IssueDetailHeader";
+import CommentSidebar from "../../../../components/Comment/CommentSidebar";
+import AddComment from "../../../../components/Comment/AddComment";
+import IssueDetailHeader from "../../../../components/Issue/IssueDetailHeader";
 
 interface IProps {
   router: NextRouter;
@@ -21,7 +21,6 @@ function IssueDetail({ router }: IProps) {
   const { loading, data, error } = useQuery(GET_COMMENTS_OF_ISSUE, {
     variables: { name, owner, issueID: Number(issueID) },
   });
-  console.log("data", data);
   const { title, number, closed, createdAt, author, comments, bodyHTML, id } =
     data ? data.repository.issue : "";
   const [addComment] = useMutation(ADD_COMMENT, {
@@ -53,7 +52,7 @@ function IssueDetail({ router }: IProps) {
       {!loading ? (
         <>
           <IssueDetailHeader labelData={{title, number, closed, createdAt, author: author.login, comments: comments.totalCount}}/>
-          <div className="lg:mx-64 my-10 flex  gap-7">
+          <div className="lg:mx-16 2xl:mx-64 my-10 flex  gap-7">
             <div className="w-10/12">
               <CommentBox
                 comment={{

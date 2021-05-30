@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { MarkGithubIcon, ThreeBarsIcon } from "@primer/octicons-react";
 import {useRouter} from "next/router";
-import { DEFAULT_SEARCH_QUERY } from "../utils/global";
+import { DEFAULT_SEARCH_QUERY } from "../../utils/global";
 export default function Header() {
   const router = useRouter()
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [searchValue, setSearchvalue] = useState(DEFAULT_SEARCH_QUERY);
 
   const handleSearchButton = () => {
-    console.log('searchValue', searchValue);
     router.replace(`/?search=${searchValue}`)
   }
 

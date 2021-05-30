@@ -24,6 +24,12 @@ You can search github repository and view all the issues, Filter issue based on 
 - [GraphQL] - A query language for your API
 - [Next Js] - Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering
 
+## Steps to add token in project:
+> 1. Rename the file .env.dummy to .env.local
+> 2. Replace YOUR_TOKEN with your personal token 
+		NEXT_PUBLIC_ACCESS_TOKEN = YOUR_TOKEN
+
+
 #### First, run the development server:
 
 `npm run dev

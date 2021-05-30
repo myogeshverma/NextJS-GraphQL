@@ -16,7 +16,7 @@ export default function Home({ repo }:Home) {
           Suggested Repositories for "{search ? search : DEFAULT_SEARCH_QUERY}"
           </h3>
         <div className="flex items-center justify-center">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
             {repo.search.edges.map((el:any) => {
               return <RepoCard repoData={el} key={el.node.id}/>
               
